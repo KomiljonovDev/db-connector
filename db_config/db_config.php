@@ -4,10 +4,11 @@
 
 	class DB_CONFIG
 	{
-		private const HOSTNAME = 'localhost';
-		private const USERNAME = 'root';
+		// Baza ma'lumotlari
+		private const HOSTNAME = '';
+		private const USERNAME = '';
 		private const PASSWORD = '';
-		private const DATABASE_NAME = 'komiljonovdev';
+		private const DATABASE_NAME = '';
 
 		protected $conn;
 
@@ -136,6 +137,4 @@
 			return mysqli_query($this->conn, $this->escapeString($query));
 		}
 	}
-
-	$db = new DB_CONFIG;
 ?>
