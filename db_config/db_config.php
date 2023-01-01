@@ -132,7 +132,7 @@
 		}
 
 		// Ma'lumotlar bazasiga qo'lda so'rov yuborish
-		public function whitSqlQuery($query)
+		public function withSqlQuery($query)
 		{
 			return mysqli_query($this->conn, $this->escapeString($query));
 		}
