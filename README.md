@@ -54,7 +54,7 @@ Ma'lumotlar bazasiga sql so'rov bilan murojaat qilish:
 
 ```php
 <?php
-	$db->whitSqlQuery("UPDATE `users` SET `password` = '12345' WHERE `users`.`id` = 1;");
+	$db->withSqlQuery("UPDATE `users` SET `password` = '12345' WHERE `users`.`id` = 1;");
 
 ```
 Ma'lumotlar bazasidan biror ma'lumotni shartga ko'ra o'chirish:
