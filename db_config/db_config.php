@@ -26,7 +26,7 @@
 		}
 
 		// Ma'lumotlar bazasi bilan bog'lanishni uzish
-		public function disConnect()
+		public function disconnect()
 		{
 			$this->conn = NULL;
 			$this->dataSet = NULL;
@@ -135,6 +135,15 @@
 		public function withSqlQuery($query)
 		{
 			return mysqli_query($this->conn, $this->escapeString($query));
+		}
+
+		// Ma'lumotlar bazasidan qaytgan javobni tartib bilan o'qish
+		public function fetch()
+		{
+			if ($this->dataSet) {
+				return mysqli_fetch_assoc($this->dataSet) ?? false;
+			}
+			return false;
 		}
 	}
 ?>
